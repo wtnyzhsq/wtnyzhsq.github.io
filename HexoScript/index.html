@@ -22,30 +22,33 @@
     var CONFIG = {"hostname":"www.wtnyzhsq.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content=":看二更云,三更月,四更天。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="帘外五更风">
-<meta property="og:url" content="https://www.wtnyzhsq.xyz/index.html">
+  <meta name="description" content="HexoScript                             注：搭建完博客后发现进行文章编写需要执行繁琐的hexo clean hexo g hexo d等命令，且我的博客还安装了Service Worker 服务，每一次静态页面的修改都需要对相应缓存版本号进行修改。所以利用golang语言编写了相应的小脚本。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo博客一键部署及源代码上传github脚本">
+<meta property="og:url" content="https://www.wtnyzhsq.xyz/HexoScript/index.html">
 <meta property="og:site_name" content="帘外五更风">
-<meta property="og:description" content=":看二更云,三更月,四更天。">
+<meta property="og:description" content="HexoScript                             注：搭建完博客后发现进行文章编写需要执行繁琐的hexo clean hexo g hexo d等命令，且我的博客还安装了Service Worker 服务，每一次静态页面的修改都需要对相应缓存版本号进行修改。所以利用golang语言编写了相应的小脚本。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-25T04:38:37.880Z">
+<meta property="article:modified_time" content="2021-02-25T04:59:30.069Z">
 <meta property="article:author" content="wtnyzhsq">
+<meta property="article:tag" content="脚本">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.wtnyzhsq.xyz/">
+<link rel="canonical" href="https://www.wtnyzhsq.xyz/HexoScript/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>帘外五更风</title>
+  <title>hexo博客一键部署及源代码上传github脚本 | 帘外五更风</title>
   
 
 
@@ -195,191 +198,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wtnyzhsq.xyz/SQL%E6%B3%A8%E5%85%A5%E2%80%94%E5%AE%BD%E5%AD%97%E8%8A%82/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/blogger.jpg">
-      <meta itemprop="name" content="wtnyzhsq">
-      <meta itemprop="description" content=":看二更云,三更月,四更天。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="帘外五更风">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/SQL%E6%B3%A8%E5%85%A5%E2%80%94%E5%AE%BD%E5%AD%97%E8%8A%82/" class="post-title-link" itemprop="url">SQL注入-宽字节</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-25 12:38:37 / 修改时间：14:26:31" itemprop="dateCreated datePublished" datetime="2021-02-25T12:38:37+08:00">2021-02-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">安全</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="SQL注入-宽字节"><a href="#SQL注入-宽字节" class="headerlink" title="SQL注入-宽字节"></a>SQL注入-宽字节</h2><p>搭建本地环境sqli-labs做的宽字节sql注入测试。</p>
-<p>[TOC]</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/SQL%E6%B3%A8%E5%85%A5%E2%80%94%E5%AE%BD%E5%AD%97%E8%8A%82/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wtnyzhsq.xyz/spider/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/blogger.jpg">
-      <meta itemprop="name" content="wtnyzhsq">
-      <meta itemprop="description" content=":看二更云,三更月,四更天。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="帘外五更风">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/spider/" class="post-title-link" itemprop="url">分析ajax爬取头条图片</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-25 12:38:37 / 修改时间：12:46:51" itemprop="dateCreated datePublished" datetime="2021-02-25T12:38:37+08:00">2021-02-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>–以今日头条为例通过分析 Ajax 抓取网页数据，并把数据分文件夹保存到本地。</p>
-<span id="more"></span>
-
-<h2 id="首先踩点"><a href="#首先踩点" class="headerlink" title="首先踩点"></a>首先踩点</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/spider/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -395,10 +217,9 @@
       <meta itemprop="name" content="帘外五更风">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/HexoScript/" class="post-title-link" itemprop="url">hexo博客一键部署及源代码上传github脚本</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          hexo博客一键部署及源代码上传github脚本
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -445,7 +266,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <blockquote class="blockquote-center">
+        <blockquote class="blockquote-center">
             <i class="fa fa-quote-left"></i>
             <p>HexoScript  </p>
 
@@ -453,117 +274,76 @@
           </blockquote>
 
 <h6 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h6><p>搭建完博客后发现进行文章编写需要执行繁琐的hexo clean hexo g hexo d等命令，且我的博客还安装了Service Worker 服务，每一次静态页面的修改都需要对相应缓存版本号进行修改。所以利用golang语言编写了相应的小脚本。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/HexoScript/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+<div class="note warning">
+            <p>,只是个小脚本，功能和代码都很少而且逻辑不一定对，只是适合自己用，当然可以借鉴一下。有以下几个小技术（后期根据需求决定是否再继续扩展） </p>
+          </div>
+
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 文件读取（插入内容）</li>
+<li><input checked="" disabled="" type="checkbox"> 利用os/exec包对cmd的使用</li>
+<li><input checked="" disabled="" type="checkbox"> 字符分割等</li>
+</ul>
+<h6 id="代码部分："><a href="#代码部分：" class="headerlink" title="代码部分："></a>代码部分：</h6><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//EditJs对sw.js文件内缓存版本号进行修改</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">EditJs</span><span class="params">()</span></span> &#123;</span><br><span class="line">    file, err := os.Open(<span class="string">&quot;D:\\BLOG\\blog\\source\\sw.js&quot;</span>)</span><br><span class="line">    CheackErr(err)</span><br><span class="line">    <span class="keyword">defer</span> file.Close()</span><br><span class="line"></span><br><span class="line">    content, err1 := ioutil.ReadAll(file) <span class="comment">//ioutil.ReadAll读取文件</span></span><br><span class="line">    CheackErr(err1)</span><br><span class="line">    strcontent := <span class="keyword">string</span>(content)</span><br><span class="line">    list := strings.SplitN(strcontent,<span class="string">&quot;&#x27;&quot;</span>,<span class="number">3</span>) </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">字符串分割目的是把&#x27;-999991&#x27;分割出来根据符号`将整个文件分割为字符串切片。</span></span><br><span class="line"><span class="comment">          sw.js文件部分代码。</span></span><br><span class="line"><span class="comment">const cacheSuffixVersion = &#x27;-999991&#x27;,</span></span><br><span class="line"><span class="comment">    maxEntries = 100;</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">importScripts(&#x27;https://cdn.... </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//字符串转换为数字，-999991，每次执行加一，即更改缓存版本号。</span></span><br><span class="line">    num, _ := strconv.Atoi(list[<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">if</span> num &lt; <span class="number">100</span> &#123;</span><br><span class="line">        num = num + <span class="number">1</span></span><br><span class="line">        fmt.Println(num)</span><br><span class="line">        <span class="comment">//以下代码为字符串拼接形成新字符串覆盖原sw.js文件达到数据插入功能</span></span><br><span class="line">        tempFile, err := os.OpenFile(<span class="string">&quot;D:\\BLOG\\blog\\source\\sw.tmp&quot;</span>, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, <span class="number">0644</span>)</span><br><span class="line">        <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">            fmt.Printf(<span class="string">&quot;Temp create failed! err: %v\n&quot;</span>, err)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        writer := bufio.NewWriter(tempFile)</span><br><span class="line">        _ = writer.Flush()</span><br><span class="line">        _, _ = writer.WriteString(list[<span class="number">0</span>])</span><br><span class="line">        _ = writer.Flush()</span><br><span class="line">        _, _ = writer.WriteString(<span class="string">&quot;&#x27;&quot;</span>+strconv.Itoa(num)+<span class="string">&quot;&#x27;&quot;</span>)</span><br><span class="line">        _ = writer.Flush()</span><br><span class="line">        _, _ = writer.WriteString(list[<span class="number">2</span>])</span><br><span class="line">        _ = writer.Flush()</span><br><span class="line">        file.Close()</span><br><span class="line">        tempFile.Close()</span><br><span class="line">        err = os.Rename(<span class="string">&quot;D:\\BLOG\\blog\\source\\sw.tmp&quot;</span>, <span class="string">&quot;D:\\BLOG\\blog\\source\\sw.js&quot;</span>)</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">panic</span>(<span class="string">&quot;缓存版本号超出最大值&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(<span class="string">&quot;sw.js缓存版本号修改完成。&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note ">
+            <p>, 主要即为上面对文件进行读取的代码，下面代码利用exec.Command()函数对命令行进行操作代替手动输入hexo clean、git等命令 </p>
+          </div>
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">deliverPublic</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> err error</span><br><span class="line">    <span class="keyword">var</span> out []<span class="keyword">byte</span></span><br><span class="line">    err = os.Chdir(<span class="string">&quot;d:/BLOG/blog&quot;</span>) <span class="comment">//切换工作目录</span></span><br><span class="line">    CheackErr(err)</span><br><span class="line"></span><br><span class="line">    out, err = exec.Command(<span class="string">&quot;npm&quot;</span>,<span class="string">&quot;run&quot;</span>, <span class="string">&quot;sendout&quot;</span>).Output()</span><br><span class="line">    CheackErr(err)</span><br><span class="line">    fmt.Printf(<span class="keyword">string</span>(out))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">deliverSource</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> err error</span><br><span class="line">    <span class="keyword">var</span> out []<span class="keyword">byte</span></span><br><span class="line">    err = os.Chdir(<span class="string">&quot;d:/BLOG/blog&quot;</span>)</span><br><span class="line">    CheackErr(err)</span><br><span class="line"></span><br><span class="line">    out, err = exec.Command(<span class="string">&quot;git&quot;</span>,<span class="string">&quot;add&quot;</span>, <span class="string">&quot;.&quot;</span>).Output()</span><br><span class="line">    CheackErr(err)</span><br><span class="line">    fmt.Printf(<span class="keyword">string</span>(out))</span><br><span class="line">	</span><br><span class="line">    timeStr:=time.Now().Format(<span class="string">&quot;2006-01-02 15:04:05&quot;</span>)</span><br><span class="line">    out, err = exec.Command(<span class="string">&quot;git&quot;</span>,<span class="string">&quot;commit&quot;</span>, <span class="string">&quot;-m&quot;</span>, timeStr).Output()</span><br><span class="line">    CheackErr(err)</span><br><span class="line">    fmt.Printf(<span class="keyword">string</span>(out))</span><br><span class="line"></span><br><span class="line">    out, err = exec.Command(<span class="string">&quot;git&quot;</span>,<span class="string">&quot;push&quot;</span>).Output()</span><br><span class="line">    CheackErr(err)</span><br><span class="line">    fmt.Printf(<span class="keyword">string</span>(out))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note warning">
+            <p>,本脚本技术含量太低，借鉴性不高，不过希望能对你有帮助</p>
+          </div>
+
+
     </div>
 
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>wtnyzhsq
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.wtnyzhsq.xyz/HexoScript/" title="hexo博客一键部署及源代码上传github脚本">https://www.wtnyzhsq.xyz/HexoScript/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.wtnyzhsq.xyz/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/blogger.jpg">
-      <meta itemprop="name" content="wtnyzhsq">
-      <meta itemprop="description" content=":看二更云,三更月,四更天。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="帘外五更风">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
           
-            <a href="/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
+          <div class="post-tags">
+              <a href="/tags/%E8%84%9A%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 脚本</a>
+          </div>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-02-24 22:24:04" itemprop="dateCreated datePublished" datetime="2021-02-24T22:24:04+08:00">2021-02-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-25 11:52:19" itemprop="dateModified" datetime="2021-02-25T11:52:19+08:00">2021-02-25</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>367</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/spider/" rel="next" title="分析ajax爬取头条图片">
+      分析ajax爬取头条图片 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -616,6 +396,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%B3%A8%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">注：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">代码部分：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -817,6 +598,16 @@ window.addEventListener('pjax:success', () => {
   
 
   
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://www.wtnyzhsq.xyz/HexoScript/',]
+      });
+      });
+  </script>
 
     </div>
 <script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
