@@ -3,8 +3,15 @@
 
 
     <url>
-        <loc>https://www.wtnyzhsq.xyz/tags/hello/</loc>
-        <lastmod>2021-02-25T03:41:20.074Z</lastmod>
+        <loc>https://www.wtnyzhsq.xyz/tags/Another-Tag/</loc>
+        <lastmod>2021-02-25T03:52:19.310Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.wtnyzhsq.xyz/tags/Testing/</loc>
+        <lastmod>2021-02-25T03:52:19.310Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
