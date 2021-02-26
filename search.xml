@@ -101,11 +101,6 @@
       </tags>
   </entry>
   <entry>
-    <title>TESTPUSH</title>
-    <url>/TESTPUSH/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>分析ajax爬取头条图片</title>
     <url>/spider/</url>
     <content><![CDATA[<p>–以今日头条为例通过分析 Ajax 抓取网页数据，并把数据分文件夹保存到本地。</p>
