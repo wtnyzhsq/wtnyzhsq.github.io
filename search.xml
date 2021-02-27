@@ -4,6 +4,8 @@
     <title>hexo博客一键部署及源代码上传github脚本</title>
     <url>/HexoScript/</url>
     <content><![CDATA[<h6 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h6><p>搭建完博客后发现进行文章编写需要执行繁琐的hexo clean hexo g hexo d等命令，且我的博客还安装了Service Worker 服务，每一次静态页面的修改都需要对相应缓存版本号进行修改。所以利用golang语言编写了相应的小脚本。</p>
+<span id="more"></span>
+
 <ul>
 <li><input checked="" disabled="" type="checkbox"> 文件读取（插入内容）</li>
 <li><input checked="" disabled="" type="checkbox"> 利用os/exec包对cmd的使用</li>
@@ -28,8 +30,10 @@
   <entry>
     <title>SQL注入-宽字节</title>
     <url>/SQL%E6%B3%A8%E5%85%A5%E2%80%94%E5%AE%BD%E5%AD%97%E8%8A%82/</url>
-    <content><![CDATA[<p>搭建本地环境sqli-labs做的宽字节sql注入测试。</p>
-<p>[TOC]</p>
+    <content><![CDATA[<p>简单的sql宽字节注入</p>
+<span id="more"></span>
+
+<p>搭建本地环境sqli-labs做的宽字节sql注入测试。</p>
 <h4 id="宽字节注入原理"><a href="#宽字节注入原理" class="headerlink" title="宽字节注入原理"></a>宽字节注入原理</h4><p>在说注入原理前，首先得认识PHP中的**addslashes()**函数：</p>
 <img data-src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/addslashes()%E5%87%BD%E6%95%B0.png" style="zoom: 80%;" />
 
