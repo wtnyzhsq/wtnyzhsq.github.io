@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"wtnyzhsq.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="简单的sql宽字节注入   搭建本地环境sqli-labs做的宽字节sql注入测试。 宽字节注入原理在说注入原理前，首先得认识PHP中的**addslashes()**函数：     也就是说，当你输入单引号等字符时，addslashes函数会自动加上**\**对字符进行转义，这样就会使得普通字符型注入只添加单引号闭合无法生效； 那么，要找到注入点就要想办法从addslashes函数逃逸出来。才能">
+  <meta name="description" content="简单的sql宽字节注入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL注入-宽字节">
 <meta property="og:url" content="https://wtnyzhsq.xyz/SQL%E6%B3%A8%E5%85%A5%E2%80%94%E5%AE%BD%E5%AD%97%E8%8A%82/index.html">
 <meta property="og:site_name" content="帘外五更风">
-<meta property="og:description" content="简单的sql宽字节注入   搭建本地环境sqli-labs做的宽字节sql注入测试。 宽字节注入原理在说注入原理前，首先得认识PHP中的**addslashes()**函数：     也就是说，当你输入单引号等字符时，addslashes函数会自动加上**\**对字符进行转义，这样就会使得普通字符型注入只添加单引号闭合无法生效； 那么，要找到注入点就要想办法从addslashes函数逃逸出来。才能">
+<meta property="og:description" content="简单的sql宽字节注入">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/addslashes()%E5%87%BD%E6%95%B0.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/sql%E6%B3%A8%E5%85%A5.png">

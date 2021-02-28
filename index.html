@@ -265,26 +265,6 @@
 
       
           <p>简单的sql宽字节注入</p>
-<span id="more"></span>
-
-<p>搭建本地环境sqli-labs做的宽字节sql注入测试。</p>
-<h4 id="宽字节注入原理"><a href="#宽字节注入原理" class="headerlink" title="宽字节注入原理"></a>宽字节注入原理</h4><p>在说注入原理前，首先得认识PHP中的**addslashes()**函数：</p>
-<img data-src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/addslashes()%E5%87%BD%E6%95%B0.png" style="zoom: 80%;">
-
-
-
-<p>也就是说，当你输入单引号等字符时，addslashes函数会自动加上**\**对字符进行转义，这样就会使得普通字符型注入只添加单引号闭合无法生效；</p>
-<p>那么，要找到注入点就要想办法从addslashes函数逃逸出来。才能实现引号的闭合。这里存在两种办法：</p>
-<blockquote><ol>
-<li>把addslashes()函数所添加的反斜杠再添加一个反斜杠，对反斜杠进行转义，即“\\”。</li>
-<li>想办法让\消失。</li>
-</ol>
-<p>针对第二种方法，利用的是mysql的一个特性，mysql在使用GBK编码时会认为两个字符时一个汉字（前一个ascii码要大于128，才到汉字的范围）</p>
-<p>​                    ’       -&gt;     \‘      -&gt;   %5c%27</p>
-<p>​                %df     -&gt;  %df\‘  -&gt;   %df%5c%27  -&gt; </p>
-</blockquote>
-
-<p>加入单引号时，addslashes()函数会自动添加反斜杠对单引号进行转移，而mysql使用GBK编码时对字符进行编码\‘就变成了%5c%27，这个时候如果再在%5c%27前面加上一个字符如“%df”（ascii码大于128的字符即可），mysql在进行GBK编码时，会将两个字符%df%5c认为是一个汉字，这个时候单引号就可以逃逸出来进行单引号闭合。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/SQL%E6%B3%A8%E5%85%A5%E2%80%94%E5%AE%BD%E5%AD%97%E8%8A%82/#more" rel="contents">
@@ -342,7 +322,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-27 14:32:18" itemprop="dateModified" datetime="2021-02-27T14:32:18+08:00">2021-02-27</time>
+                <time title="修改时间：2021-02-28 11:34:19" itemprop="dateModified" datetime="2021-02-28T11:34:19+08:00">2021-02-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -380,13 +360,6 @@
 
       
           <p>–以今日头条为例通过分析 Ajax 抓取网页数据，并把数据分文件夹保存到本地。</p>
-<span id="more"></span>
-
-<h3 id="首先踩点"><a href="#首先踩点" class="headerlink" title="首先踩点"></a>首先踩点</h3><h4 id="分析内容"><a href="#分析内容" class="headerlink" title="- - -分析内容- - -"></a>- - -分析内容- - -</h4><p>搜索框输入‘街拍’，刷新后出现ajax请求，类型为XHR的即为ajax请求。点击preview分析内容，我们发现ajax请求的主要内容都在data标签里面，点开data，发现该标签里面分了很多小板块（0，1，2.等等），对比网页就可以得出这些小板块就是网页的一个模块，里面存放的东西就是我们要找的图片和标题。<br><img data-src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B92.png" alt="踩点2"></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B94.png" alt="踩点3"></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B95.png" alt="踩点4"></p>
-<h5 id="分析请求头"><a href="#分析请求头" class="headerlink" title="- - -分析请求头- - -"></a>- - -分析请求头- - -</h5><p>在这个网页里面，每一次加载就是一个ajax请求。这时候分析两三个请求头就可以发现，每次发送ajax请求url变化的只是offset和timestamp，复制RequestURL打开发现timestamp不用输也能得出结果。所以变化的相当与只有offset，每次变化都是20，说明每次加载20个模块，也就是20组图片。所以在这里设置一个循环就可以采集到很多的目标数据。</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B95-1.png" alt="踩点5"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/spider/#more" rel="contents">
@@ -482,22 +455,6 @@
 
       
           <h6 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h6><p>搭建完博客后发现进行文章编写需要执行繁琐的hexo clean hexo g hexo d等命令，且我的博客还安装了Service Worker 服务，每一次静态页面的修改都需要对相应缓存版本号进行修改。所以利用golang语言编写了相应的小脚本。</p>
-<span id="more"></span>
-
-<ul>
-<li><input checked disabled type="checkbox"> 文件读取（插入内容）</li>
-<li><input checked disabled type="checkbox"> 利用os/exec包对cmd的使用</li>
-<li><input checked disabled type="checkbox"> 字符分割等</li>
-</ul>
-<h6 id="代码部分："><a href="#代码部分：" class="headerlink" title="代码部分："></a>代码部分：</h6><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//EditJs对sw.js文件内缓存版本号进行修改</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">EditJs</span><span class="params">()</span></span> &#123;</span><br><span class="line">    file, err := os.Open(<span class="string">&quot;D:\\BLOG\\blog\\source\\sw.js&quot;</span>)</span><br><span class="line">    CheackErr(err)</span><br><span class="line">    <span class="keyword">defer</span> file.Close()</span><br><span class="line"></span><br><span class="line">    content, err1 := ioutil.ReadAll(file) <span class="comment">//ioutil.ReadAll读取文件</span></span><br><span class="line">    CheackErr(err1)</span><br><span class="line">    strcontent := <span class="keyword">string</span>(content)</span><br><span class="line">    list := strings.SplitN(strcontent,<span class="string">&quot;&#x27;&quot;</span>,<span class="number">3</span>) </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">字符串分割目的是把&#x27;-999991&#x27;分割出来根据符号`将整个文件分割为字符串切片。</span></span><br><span class="line"><span class="comment">          sw.js文件部分代码。</span></span><br><span class="line"><span class="comment">const cacheSuffixVersion = &#x27;-999991&#x27;,</span></span><br><span class="line"><span class="comment">    maxEntries = 100;</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">importScripts(&#x27;https://cdn.... </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//字符串转换为数字，-999991，每次执行加一，即更改缓存版本号。</span></span><br><span class="line">    num, _ := strconv.Atoi(list[<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">if</span> num &lt; <span class="number">100</span> &#123;</span><br><span class="line">        num = num + <span class="number">1</span></span><br><span class="line">        fmt.Println(num)</span><br><span class="line">        <span class="comment">//以下代码为字符串拼接形成新字符串覆盖原sw.js文件达到数据插入功能</span></span><br><span class="line">        tempFile, err := os.OpenFile(<span class="string">&quot;D:\\BLOG\\blog\\source\\sw.tmp&quot;</span>, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, <span class="number">0644</span>)</span><br><span class="line">        <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">            fmt.Printf(<span class="string">&quot;Temp create failed! err: %v\n&quot;</span>, err)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        writer := bufio.NewWriter(tempFile)</span><br><span class="line">        _ = writer.Flush()</span><br><span class="line">        _, _ = writer.WriteString(list[<span class="number">0</span>])</span><br><span class="line">        _ = writer.Flush()</span><br><span class="line">        _, _ = writer.WriteString(<span class="string">&quot;&#x27;&quot;</span>+strconv.Itoa(num)+<span class="string">&quot;&#x27;&quot;</span>)</span><br><span class="line">        _ = writer.Flush()</span><br><span class="line">        _, _ = writer.WriteString(list[<span class="number">2</span>])</span><br><span class="line">        _ = writer.Flush()</span><br><span class="line">        file.Close()</span><br><span class="line">        tempFile.Close()</span><br><span class="line">        err = os.Rename(<span class="string">&quot;D:\\BLOG\\blog\\source\\sw.tmp&quot;</span>, <span class="string">&quot;D:\\BLOG\\blog\\source\\sw.js&quot;</span>)</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">panic</span>(<span class="string">&quot;缓存版本号超出最大值&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(<span class="string">&quot;sw.js缓存版本号修改完成。&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">deliverPublic</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> err error</span><br><span class="line">    <span class="keyword">var</span> out []<span class="keyword">byte</span></span><br><span class="line">    err = os.Chdir(<span class="string">&quot;d:/BLOG/blog&quot;</span>) <span class="comment">//切换工作目录</span></span><br><span class="line">    CheackErr(err)</span><br><span class="line"></span><br><span class="line">    out, err = exec.Command(<span class="string">&quot;npm&quot;</span>,<span class="string">&quot;run&quot;</span>, <span class="string">&quot;sendout&quot;</span>).Output()</span><br><span class="line">    CheackErr(err)</span><br><span class="line">    fmt.Printf(<span class="keyword">string</span>(out))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">deliverSource</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> err error</span><br><span class="line">    <span class="keyword">var</span> out []<span class="keyword">byte</span></span><br><span class="line">    err = os.Chdir(<span class="string">&quot;d:/BLOG/blog&quot;</span>)</span><br><span class="line">    CheackErr(err)</span><br><span class="line"></span><br><span class="line">    out, err = exec.Command(<span class="string">&quot;git&quot;</span>,<span class="string">&quot;add&quot;</span>, <span class="string">&quot;.&quot;</span>).Output()</span><br><span class="line">    CheackErr(err)</span><br><span class="line">    fmt.Printf(<span class="keyword">string</span>(out))</span><br><span class="line">	</span><br><span class="line">    timeStr:=time.Now().Format(<span class="string">&quot;2006-01-02 15:04:05&quot;</span>)</span><br><span class="line">    out, err = exec.Command(<span class="string">&quot;git&quot;</span>,<span class="string">&quot;commit&quot;</span>, <span class="string">&quot;-m&quot;</span>, timeStr).Output()</span><br><span class="line">    CheackErr(err)</span><br><span class="line">    fmt.Printf(<span class="keyword">string</span>(out))</span><br><span class="line"></span><br><span class="line">    out, err = exec.Command(<span class="string">&quot;git&quot;</span>,<span class="string">&quot;push&quot;</span>).Output()</span><br><span class="line">    CheackErr(err)</span><br><span class="line">    fmt.Printf(<span class="keyword">string</span>(out))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/HexoScript/#more" rel="contents">
