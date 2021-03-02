@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>爬虫 on 帘外五更风 | </title>
+    <link>http://wtnyzhsq.xyz/tags/%E7%88%AC%E8%99%AB/</link>
+    <description>Recent content in 爬虫 on 帘外五更风 | </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 02 Mar 2021 18:50:50 +0800</lastBuildDate><atom:link href="http://wtnyzhsq.xyz/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spider</title>
+      <link>http://wtnyzhsq.xyz/post/spider/</link>
+      <pubDate>Tue, 02 Mar 2021 18:50:50 +0800</pubDate>
+      
+      <guid>http://wtnyzhsq.xyz/post/spider/</guid>
+      <description>&lt;p&gt;以今日头条为例通过分析 Ajax 抓取网页数据，并把数据分文件夹保存到本地。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
