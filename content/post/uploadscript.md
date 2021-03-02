@@ -2,7 +2,7 @@
 title: "hexo脚本"
 date: 2021-03-02T20:37:08+08:00
 lastmod: 2021-03-02T20:37:08+08:00
-draft: true
+draft: false
 keywords: ["脚本",]
 description: ""
 tags: ["脚本",]
