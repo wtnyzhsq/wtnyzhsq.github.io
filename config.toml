@@ -109,7 +109,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   customCSS = []
   customJS = []
 
-  uglyURLs = false          # please keep same with uglyurls setting
+  uglyURLs = true          # please keep same with uglyurls setting
 
   # Show language selector for multilingual site.
   showLanguageSelector = false
