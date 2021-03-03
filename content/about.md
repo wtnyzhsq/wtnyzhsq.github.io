@@ -15,9 +15,9 @@ weight: 50
 <center><font color=black size=5>2021书单</font></center>
 
 * [ ] [The way to go]( https://learnku.com/docs/the-way-to-go/preface/3561)
-* [ ] [link Go专家编程](https://www.bookstack.cn/read/GoExpertProgramming/README.md)
-* [ ] [link 算法小抄 ](https://labuladong.gitee.io/algo/)
-* [ ] [go web编程](https://www.kancloud.cn/kancloud/web-application-with-golang/44105)
+* [ ] [Go专家编程](https://www.bookstack.cn/read/GoExpertProgramming/README.md)
+* [ ] [算法小抄 ](https://labuladong.gitee.io/algo/)
+* [ ] [Go web编程](https://www.kancloud.cn/kancloud/web-application-with-golang/44105)
 * [ ] [Go并发编程实站(无连链接)]()
 * [ ] [Go语言高级编程](https://chai2010.cn/advanced-go-programming-book/)
 
