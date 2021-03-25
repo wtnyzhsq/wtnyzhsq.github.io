@@ -1,12 +1,12 @@
 ---
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
-date: {{ .Date }}
-lastmod: {{ .Date }}
+title: "二叉树的基本结构与二分查找"
+date: 2021-03-06T14:58:34+08:00
+lastmod: 2021-03-06T14:58:34+08:00
 draft: false
-keywords: ["",]
+keywords: ["二叉树","数据结构与算法"]
 description: ""
-tags: ["",]
-categories: [""]
+tags: ["二叉树","二分查找"]
+categories: ["数据结构与算法"]
 author: "wtnyzhsq"
 comment: false
 toc: true
@@ -28,6 +28,9 @@ sequenceDiagrams:
 
 ---
 
-
+ 数据结构与算法学习过程中二叉树的基本结构与基本二分查找算法的记录
 
 <!--more-->
+
+### 二叉树的定义：
+

@@ -1,5 +1,5 @@
 ---
-title: "hexo脚本"
+title: "hexo自动上传脚本"
 date: 2021-03-02T20:37:08+08:00
 lastmod: 2021-03-02T20:37:08+08:00
 draft: false
