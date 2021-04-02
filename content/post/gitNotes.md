@@ -1,5 +1,5 @@
 ---
-title: "GitNotes"
+title: "Git基础命令"
 date: 2021-04-02T10:21:37+08:00
 lastmod: 2021-04-02T10:21:37+08:00
 draft: false
@@ -36,20 +36,20 @@ sequenceDiagrams:
 
 ------
 
-#### 基础篇
+### 基础篇
 
-##### Basic Level 1 branch
+#### Basic Level 1 branch
 
 * git branch name  新建name分支
 
-##### Basic Level 2 checkout
+#### Basic Level 2 checkout
 
 * git checkout  name 切换到 name分支 
 * git checkout -b name  新建并切换到name分支
 
 > 创建分支相当于建立另一个索引，指向当前节点，不会增加存储空间开销
 
-##### Basic Level 3 merge
+#### Basic Level 3 merge
 
 * 两个分支，把bugFix合并到main。*以下图片星号均表示当前分支*
 
@@ -61,7 +61,7 @@ sequenceDiagrams:
 
 > （分支切换到bugFix后合并main，bugFix即可指向c4）
 
-##### Basic Level 4
+#### Basic Level 4
 
 * git rebase name 
 
@@ -75,7 +75,7 @@ git rebase main 之后
 
 <img src="https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/20210402113610.png" alt="image-20210402113605144" style="zoom:67%;" />
 
-#### 高级篇
+### 高级篇
 
 #### Basic Level 1
 
