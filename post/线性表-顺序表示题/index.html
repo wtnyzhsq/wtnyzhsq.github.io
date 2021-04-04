@@ -1,5 +1,5 @@
-<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>线性表 顺序表示（题） - 帘外五更风</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="wtnyzhsq"><meta name=description content="顺序表的一些简单题"><meta name=keywords content="线性表"><meta name=generator content="Hugo 0.82.0 with theme even"><link rel=canonical href=https://wtnyzhsq.xyz/post/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%A4%BA%E9%A2%98/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link href=/sass/main.min.39a3e01cac9473be1356f3572fcfe34b2e363efabad244a99a40f28a812c837e.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:title" content="线性表 顺序表示（题）"><meta property="og:description" content="顺序表的一些简单题"><meta property="og:type" content="article"><meta property="og:url" content="https://wtnyzhsq.xyz/post/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%A4%BA%E9%A2%98/"><meta property="article:section" content="post"><meta property="article:published_time" content="2021-04-04T13:57:03+08:00"><meta property="article:modified_time" content="2021-04-04T13:57:03+08:00"><meta itemprop=name content="线性表 顺序表示（题）"><meta itemprop=description content="顺序表的一些简单题"><meta itemprop=datePublished content="2021-04-04T13:57:03+08:00"><meta itemprop=dateModified content="2021-04-04T13:57:03+08:00"><meta itemprop=wordCount content="729"><meta itemprop=keywords content="线性表,"><meta name=twitter:card content="summary"><meta name=twitter:title content="线性表 顺序表示（题）"><meta name=twitter:description content="顺序表的一些简单题"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script><script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>Gopher</a></div><div class=mobile-navbar-icon><span></span><span></span><span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>主页</li></a><a href=/post/><li class=mobile-menu-item>归档</li></a><a href=/tags/><li class=mobile-menu-item>标签</li></a><a href=/categories/><li class=mobile-menu-item>分类</li></a><a href=/about/><li class=mobile-menu-item>关于</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>Gopher</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>主页</a></li><li class=menu-item><a class=menu-item-link href=/post/>归档</a></li><li class=menu-item><a class=menu-item-link href=/tags/>标签</a></li><li class=menu-item><a class=menu-item-link href=/categories/>分类</a></li><li class=menu-item><a class=menu-item-link href=/about/>关于</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>线性表 顺序表示（题）</h1><div class=post-meta><span class=post-time>2021-04-04</span><div class=post-category><a href=/categories/%E7%BA%BF%E6%80%A7%E8%A1%A8/>线性表</a></div><span class=more-meta>约 729 字</span>
-<span class=more-meta>预计阅读 2 分钟</span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>文章目录</h2><div class="post-toc-content always-active"><nav id=TableOfContents><ul><li><ul><li><a href=#1从顺序表中删除具有最小值的元素假设唯一并由函数返回被删元素的值空出的位置由最后一个元素填补若顺序表为空则显示出错信息并退出运行image-20210404135906730httpscdnjsdelivrnetghwtnyzhsqcdnstaticimg20210404135915png>1．从顺序表中删除具有最小值的元素（假设唯一）并由函数返回被删元素的值。空出的位置由最后一个元素填补，若顺序表为空，则显示出错信息并退出运行。<img src=https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/20210404135915.png alt=image-20210404135906730></a></li><li><a href=#2设计一个高效算法将顺序表l的所有元素逆置要求算法的空间复杂度为o1>2．设计一个高效算法，将顺序表L的所有元素逆置，要求算法的空间复杂度为O(1).</a></li><li><a href=#3对长度为n的顺序表l编写一个时间复杂度为on空间复杂度为o1的算法该算法删除线性表中所有值为x的数据元素>3、对长度为n的顺序表L，编写一个时间复杂度为O(n)、空间复杂度为O(1)的算法，该算法删除线性表中所有值为x的数据元素。</a></li></ul></li></ul></nav></div></div><div class=post-content><p>22年王道数据结构中线性表的顺序表的一些简单题的记录。（Golang实现）</p><h2 id=1从顺序表中删除具有最小值的元素假设唯一并由函数返回被删元素的值空出的位置由最后一个元素填补若顺序表为空则显示出错信息并退出运行image-20210404135906730httpscdnjsdelivrnetghwtnyzhsqcdnstaticimg20210404135915png>1．从顺序表中删除具有最小值的元素（假设唯一）并由函数返回被删元素的值。空出的位置由最后一个元素填补，若顺序表为空，则显示出错信息并退出运行。<img src=https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/20210404135915.png alt=image-20210404135906730></h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>线性表 顺序表示（题） - 帘外五更风</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="wtnyzhsq"><meta name=description content="顺序表的一些简单题"><meta name=keywords content="线性表"><meta name=generator content="Hugo 0.82.0 with theme even"><link rel=canonical href=https://wtnyzhsq.xyz/post/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%A4%BA%E9%A2%98/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/manifest.json><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link href=/sass/main.min.39a3e01cac9473be1356f3572fcfe34b2e363efabad244a99a40f28a812c837e.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><meta property="og:title" content="线性表 顺序表示（题）"><meta property="og:description" content="顺序表的一些简单题"><meta property="og:type" content="article"><meta property="og:url" content="https://wtnyzhsq.xyz/post/%E7%BA%BF%E6%80%A7%E8%A1%A8-%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%A4%BA%E9%A2%98/"><meta property="article:section" content="post"><meta property="article:published_time" content="2021-04-04T13:57:03+08:00"><meta property="article:modified_time" content="2021-04-04T13:57:03+08:00"><meta itemprop=name content="线性表 顺序表示（题）"><meta itemprop=description content="顺序表的一些简单题"><meta itemprop=datePublished content="2021-04-04T13:57:03+08:00"><meta itemprop=dateModified content="2021-04-04T13:57:03+08:00"><meta itemprop=wordCount content="1019"><meta itemprop=keywords content="线性表,"><meta name=twitter:card content="summary"><meta name=twitter:title content="线性表 顺序表示（题）"><meta name=twitter:description content="顺序表的一些简单题"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script><script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--></head><body><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>Gopher</a></div><div class=mobile-navbar-icon><span></span><span></span><span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><a href=/><li class=mobile-menu-item>主页</li></a><a href=/post/><li class=mobile-menu-item>归档</li></a><a href=/tags/><li class=mobile-menu-item>标签</li></a><a href=/categories/><li class=mobile-menu-item>分类</li></a><a href=/about/><li class=mobile-menu-item>关于</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>Gopher</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/>主页</a></li><li class=menu-item><a class=menu-item-link href=/post/>归档</a></li><li class=menu-item><a class=menu-item-link href=/tags/>标签</a></li><li class=menu-item><a class=menu-item-link href=/categories/>分类</a></li><li class=menu-item><a class=menu-item-link href=/about/>关于</a></li></ul></nav></header><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>线性表 顺序表示（题）</h1><div class=post-meta><span class=post-time>2021-04-04</span><div class=post-category><a href=/categories/%E7%BA%BF%E6%80%A7%E8%A1%A8/>线性表</a></div><span class=more-meta>约 1019 字</span>
+<span class=more-meta>预计阅读 3 分钟</span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>文章目录</h2><div class="post-toc-content always-active"><nav id=TableOfContents><ul><li><ul><li><a href=#1从顺序表中删除具有最小值的元素假设唯一并由函数返回被删元素的值空出的位置由最后一个元素填补若顺序表为空则显示出错信息并退出运行image-20210404135906730httpscdnjsdelivrnetghwtnyzhsqcdnstaticimg20210404135915png>1．从顺序表中删除具有最小值的元素（假设唯一）并由函数返回被删元素的值。空出的位置由最后一个元素填补，若顺序表为空，则显示出错信息并退出运行。<img src=https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/20210404135915.png alt=image-20210404135906730></a></li><li><a href=#2设计一个高效算法将顺序表l的所有元素逆置要求算法的空间复杂度为o1>2．设计一个高效算法，将顺序表L的所有元素逆置，要求算法的空间复杂度为O(1).</a></li><li><a href=#3对长度为n的顺序表l编写一个时间复杂度为on空间复杂度为o1的算法该算法删除线性表中所有值为x的数据元素>3、对长度为n的顺序表L，编写一个时间复杂度为O(n)、空间复杂度为O(1)的算法，该算法删除线性表中所有值为x的数据元素。</a></li></ul></li></ul></nav></div></div><div class=post-content><p>22年王道数据结构中线性表的顺序表的一些简单题的记录。（Golang实现）</p><h2 id=1从顺序表中删除具有最小值的元素假设唯一并由函数返回被删元素的值空出的位置由最后一个元素填补若顺序表为空则显示出错信息并退出运行image-20210404135906730httpscdnjsdelivrnetghwtnyzhsqcdnstaticimg20210404135915png>1．从顺序表中删除具有最小值的元素（假设唯一）并由函数返回被删元素的值。空出的位置由最后一个元素填补，若顺序表为空，则显示出错信息并退出运行。<img src=https://cdn.jsdelivr.net/gh/wtnyzhsq/cdnstatic/img/20210404135915.png alt=image-20210404135906730></h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -129,9 +129,46 @@
 </span><span class=lnt>24
 </span><span class=lnt>25
 </span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-go data-lang=go><span class=c1>//p17-3
 </span><span class=c1></span><span class=cm>/*
 </span><span class=cm>最笨本人解法一：🤡🤡🤡
+</span><span class=cm>(未达到题目要求，时间空间复杂度都超了)
 </span><span class=cm>思路：
 </span><span class=cm>1.新建一个切片middle，编历顺序表L记录值为x的数据元素的下标。
 </span><span class=cm>2.从最后一个元素开始编历middle，根据元素的值依次从后往前删除。
@@ -154,6 +191,41 @@
    <span class=k>return</span> <span class=kc>true</span>
 <span class=p>}</span>
 
+<span class=cm>/*
+</span><span class=cm>两个方法原理方法基本一致
+</span><span class=cm>标准解法1：
+</span><span class=cm>1.编历顺序表，变量k记录！不等于！x的元素个数。
+</span><span class=cm>2.每个不等于x的元素移动到下标为k的位置。
+</span><span class=cm>（相当于用不等于x的元素重写顺序表）
+</span><span class=cm>*/</span>
+<span class=kd>func</span> <span class=p>(</span><span class=nx>list</span> <span class=o>*</span><span class=nx>Sqlist</span><span class=p>)</span> <span class=nf>p17_3_2</span><span class=p>(</span><span class=nx>x</span> <span class=kt>int</span><span class=p>)</span> <span class=p>{</span>
+	<span class=kd>var</span> <span class=nx>k</span> <span class=p>=</span> <span class=mi>0</span>
+	<span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nx>list</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
+		<span class=k>if</span> <span class=nx>list</span><span class=p>.</span><span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=o>!=</span> <span class=nx>x</span> <span class=p>{</span>
+			<span class=nx>list</span><span class=p>.</span><span class=nx>data</span><span class=p>[</span><span class=nx>k</span><span class=p>]</span> <span class=p>=</span> <span class=nx>list</span><span class=p>.</span><span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span>
+			<span class=nx>k</span><span class=o>++</span>
+		<span class=p>}</span>
+	<span class=p>}</span>
+	<span class=nx>list</span><span class=p>.</span><span class=nx>length</span> <span class=p>=</span> <span class=nx>k</span>
+<span class=p>}</span>
+
+<span class=cm>/*
+</span><span class=cm>标准解法2：
+</span><span class=cm>1.编历顺序表，变量k记录！等于！x的元素个数。
+</span><span class=cm>2.每个不等于x的元素移动到下标为i-k的位置。
+</span><span class=cm>（相当于每个不等于x的元素前移k个位置）
+</span><span class=cm>*/</span>
+<span class=kd>func</span> <span class=p>(</span><span class=nx>list</span> <span class=o>*</span><span class=nx>Sqlist</span><span class=p>)</span> <span class=nf>p17_3_3</span><span class=p>(</span><span class=nx>x</span> <span class=kt>int</span><span class=p>)</span> <span class=p>{</span>
+	<span class=kd>var</span> <span class=nx>k</span> <span class=p>=</span> <span class=mi>0</span>
+	<span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nx>list</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
+		<span class=k>if</span> <span class=nx>list</span><span class=p>.</span><span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=o>==</span> <span class=nx>x</span> <span class=p>{</span>
+			<span class=nx>k</span><span class=o>++</span>
+		<span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+			<span class=nx>list</span><span class=p>.</span><span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=o>-</span><span class=nx>k</span><span class=p>]</span> <span class=p>=</span> <span class=nx>list</span><span class=p>.</span><span class=nx>data</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span>
+		<span class=p>}</span>
+	<span class=p>}</span>
+	<span class=nx>list</span><span class=p>.</span><span class=nx>length</span> <span class=p>=</span> <span class=nx>list</span><span class=p>.</span><span class=nx>length</span> <span class=o>-</span> <span class=nx>k</span>
+<span class=p>}</span>
 
 </code></pre></td></tr></table></div></div></div><footer class=post-footer><div class=post-tags><a href=/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8.html>线性表</a></div><nav class=post-nav><a class=next href=/post/gitnotes/><span class="next-text nav-default">Git基础命令</span>
 <span class="next-text nav-mobile">下一篇</span>
